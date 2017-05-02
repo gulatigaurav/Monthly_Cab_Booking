@@ -1,0 +1,15 @@
+<h1>Cabs#index</h1>
+<p>Here is a list of all cabs available with us . Kindly press on the downward link to display various details about the cabs that might help the students to kindly search the perfect kind of cab according to their particular requirements.</p>
+
+<h2>ALL CABS WITH TOTAL SEATING CAPACITY</h2>
+
+
+<% @cabs.each do |cab|  %>
+<body>
+<ul class="list-group">
+  <li class="list-group-item"><%=cab.name%>  <span class="badge"><%=cab.seats%></span></li>
+</ul>
+</body>
+<%=link_to("Show Details ", { :controller=>'cabs' , :action=>'show', :id=>cab.id } , :class=>'action show')%>
+<%  end  %>
+ 

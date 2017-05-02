@@ -1,0 +1,28 @@
+
+
+<h2> LIST OF STUDENTS WHO BOOKED CAB.... </h2>
+<h4>FIND YOUR NAME IN THE LIST , IF NOT 
+<br>
+WE ARE SORRY THE CAB IS CURRENTLY NOT AVAILABLE IN YOUR AREA
+</h4>
+
+<%  @places.each do |place| %>  
+
+<% @students.each do |stu|  %>
+<body>
+
+<% if place.destination=stu.pick_uo_loc %>
+
+
+<ul class="list-group">
+  <li class="list-group-item">STUDENT NAME : <%=stu.name%>, ADDRESS : <%=stu.address%>, <br> PICK UP LOCATION :  <%=stu.pick_uo_loc%>, <br> , CONTACT NO. : <%=stu.phone%></li>
+
+</ul>
+<% else %>
+<% end  %>
+</body>
+
+<%  end  %>
+<% end %>
+
+

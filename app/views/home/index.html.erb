@@ -1,0 +1,138 @@
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+p{
+        font-size: 20px;
+}       
+
+
+h3{
+	padding-left: 235px;
+	color: darkgreen;
+
+	}
+
+
+
+
+	.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:11px;width:11px;padding:0}
+    </style>
+  </head>
+
+
+<body>
+
+ <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                
+                    <div class="intro-message">
+                
+                        <h1>Home Page</h1>
+                        <hr class="intro-divider">
+                </div>
+              
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+
+
+
+
+<div class="w3-content w3-display-container" style="max-width:400px">
+          <%= image_tag("our fleet.jpeg" , class: "img-responsive") %>
+ <%= image_tag("download.jpeg" , class: "img-responsive") %>
+ <%= image_tag("download(1).jpeg" , class: "img-responsive") %>
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:50%">
+  <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+  <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+
+<h3> BOOK YOUR MONTHLY CABS WITH EASE </h3>
+
+
+<p>
+Online Cab Booking System specializing in Hiring cabs to students. It is an online system through which students can view 
+available cabs; register the cabs, view profile and book cabs for monthly basis. 
+Cab booking service is a majortransport service provided by the 
+various local transportation companies to students  within a wide spectrum of prices. 
+Mostly students living in the nearby towns and cities use cab service for their daily transportations need. This cab booking will done via the The NorthCap University and fulfils all the requirements and security standards set by the transport department and will provided at  nominal and genuine fares.
+</p>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <h3>The NorthCap University Gurgaon , Sector - 23 A</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 28.50417, lng: 77.049091};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbYD5Ii7Ey42m11CtDI7TrLSm6VQ91qpY&callback=initMap">
+    </script>
+
+
+</body>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  reg_no: 1
+  seats: 1
+  aircond: false
+  monthly_rental: 1.5
+
+two:
+  name: MyString
+  reg_no: 1
+  seats: 1
+  aircond: false
+  monthly_rental: 1.5

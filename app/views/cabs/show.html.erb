@@ -1,0 +1,21 @@
+<%=link_to("Previous page", cabs_path, :class=>'back-link')%>
+<h1>Cab Details</h1>
+<p>Find me in app/views/cab/show.html.erb</p>
+
+<div class="cabs show">
+	<h2> SHOW  CAB  </h2>
+
+<div class="list-group">
+  <a href="#" class="list-group-item">CAR NAME                 :<%=@cab.name%></a>
+  <a href="#" class="list-group-item">MONTHLY FARE             : <%=@cab.monthly_rental%></a>
+  <a href="#" class="list-group-item">REGISTERATION NUMBER     : <%=@cab.reg_no%></a>
+<a href="#" class="list-group-item">TOTAL SEATS               : <%=@cab.seats%></a>
+<a href="#" class="list-group-item">AIR CONDITIONING PRESENT  :<%=@cab.aircond  ? 'True' : 'False' %></a>
+
+<a href="#" class="list-group-item">SOURCE     : <%=@cab.places.find_by(:cab_id=>@cab).source%></a>
+
+<a href="#" class="list-group-item">ROUTE FOLLOWED     : <%=@cab.places.find_by(:cab_id=>@cab).via%></a>
+
+<a href="#" class="list-group-item">DESTINATION     : <%=@cab.places.find_by(:cab_id=>@cab).destination%></a>
+ 
+</div>
